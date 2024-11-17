@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='static/style/style.css'>
+</head>
+<body>
+<div class="header">
+    <div>
+        <a href="/">Главная страница</a>
+    </div>
+    <div>
+        <h1>Регистрация</h1>
+    </div>
+</div>
+
+<div class="container">
+    <p>{{ message }}</p>
+    <form class="registr" action="/registration_info" method="post">
+        <fieldset>
+            <legend>Создание аккаунта</legend>
+            <br><br>
+            <label for="username">Введите логин:</label><br><br>
+            <input type="text" id="username" name="username" placeholder="Your username" value="{{username}}" required>
+            <br><br><br>
+            <label for="password">Введите пароль:</label><br><br>
+            <input type="password" id="password" name="password" placeholder="Your password" value="{{password}}"
+                   required>
+            <br><br><br>
+            <label for="repeat_password">Повторите пароль:</label><br><br>
+            <input type="password" id="repeat_password" name="repeat_password" placeholder="Your password"
+                   value="{{repeat_password}}" required>
+            <br><br><br>
+            <label for="email">Введите почту:</label><br><br>
+            <input type="text" id="email" name="email" placeholder="***@mail.ru" value="{{email}}" required>
+            <br><br><br>
+            <label for="phone">Введите номер телефона:</label><br><br>
+            <input type="text" id="phone" name="phone" placeholder="+7**********" value="{{phone}}">
+            <br><br><br>
+            <label for="birthday">Введите дату рождения:</label><br><br>
+            <input type="text" id="birthday" name="birthday" placeholder="2025-05-29" value="{{birthday}}">
+            <br><br><br><br>
+        </fieldset>
+        <ul>
+            <li>Логин должен содержать не более 20 символов.</li>
+            <li>Пароль должен содержать не менее 8 символов.</li>
+            <li>Почта должна заканчиваться на "@name.ru/com".</li>
+            <li>Пример номера телефона: +7**********.</li>
+            <li>Пример даты рождения: 2025-05-29.</li>
+            <button type="submit">Регистрация</button>
+        </ul>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {{namepage}}
+        {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='static/style/style.css'>
+</head>
+<body>
+<div class="header">
+    {% block pagename %}
+    <div>
+        <a href="/login">Вход</a>
+        <a href="/registration">Регистрация</a>
+    </div>
+    <div>
+        <h1> {{title}} </h1>
+    </div>
+    {% endblock %}
+</div>
+
+<content>
+    {% block content %}
+    content
+    {% endblock %}
+</content>
+
+<div class="back_page">
+    {% block back %}
+    <button><a href="/">Вернуться назад</a></button>
+    {% endblock %}
+</div>
+
+<div class="contact">
+    {% block contact %}
+    <div>
+        <p style="font-weight: bold">Контакты:</p>
+        <p>Номер телефона: +71234567890<br>
+            email: sunclothes.gmail.com<br>
+            telegram: @sunclothes</p>
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
